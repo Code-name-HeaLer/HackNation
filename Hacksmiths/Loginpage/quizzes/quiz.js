@@ -39,8 +39,8 @@ const questions =[
         question: "A door opening at the correct key best matches the functionality of?",
         options:[
             {text: "switch-case", correct:false},
-            {text: "conditional statements", correct:true},
-            {text: "both of these", correct:false},
+            {text: "conditional statements", correct:false},
+            {text: "both of these", correct:true},
             {text: "none", correct:false},
         ]
     },
@@ -54,12 +54,12 @@ const questions =[
         ]
     },
     {
-        question: "I deal with handling unexpected errors in tasks?",
+        question: "Which exception is encountered if an index> maxsize of array is accessed?",
         options:[
-            {text: "block of code", correct:false},
-            {text: "function", correct:false},
-            {text: "object", correct:true},
-            {text: "class", correct:false},
+            {text: "StackOverflowError", correct:false},
+            {text: "MemorynotFoundError", correct:false},
+            {text: "ArrayIndexOutOfBoundsException", correct:true},
+            {text: "RuntimeError", correct:false},
         ]
     },
     {
@@ -68,7 +68,7 @@ const questions =[
             {text: "Conditionals", correct:true},
             {text: "Switch-case", correct:false},
             {text: "try-catch block", correct:false},
-            {text: "all of these", correct:false},
+            {text: "both a and b ", correct:false},
         ]
     },
     {
@@ -76,17 +76,17 @@ const questions =[
         options:[
             {text: "Array", correct:false},
             {text: "List", correct:false},
-            {text: "Queue", correct:false},
+            {text: "Linear Queue", correct:false},
             {text: "All of these", correct:true},
         ]
     },
     {
         question: "Which of these is a file-handling mechanism?",
         options:[
-            {text: "scripting", correct:false},
-            {text: "importing package", correct:false},
+            {text: "importing a stylesheet", correct:true},
+            {text: "accessing a package", correct:false},
             {text: "including a header file", correct:true},
-            {text: "all of these", correct:false},
+            {text: "both a and b", correct:false},
         ]
     }
     ];
@@ -111,11 +111,11 @@ const questions =[
         let questionNo = currentQuestionIndex+1;
         questionElement.innerHTML = questionNo+"."+currentQuestion.question;
 
-        currentQuestion.answers.forEach(answer =>{
+        currentQuestion.options.forEach(answer => {
             const button = document.createElement("button");
             button.innerHTML = answer.text;
             button.classList.add("btn");
-            answerButton.appendChild(button);
+            answerButtons.appendChild(button);
             if(answer.correct){
                 button.dataset.correct=answer.correct;
             }
@@ -130,7 +130,7 @@ const questions =[
         }
     }
 
-    function selectAnswer(){
+    function selectAnswer(e){
         const selectedBtn = e.target;
         const isCorrect = selectedBtn.dataset.correct === "true";
         if(isCorrect){
@@ -150,7 +150,7 @@ const questions =[
 
     function showScore(){
         resetState();
-        questionElement.innerHTML='You scored ${score} out of ${questions,length)!';
+        questionElement.innerHTML=`You scored ${score} out of ${questions.length}!`;
         submitButton.innerHTML="Play Again";
         submitButton.style.display="block";
     }
@@ -171,8 +171,7 @@ const questions =[
             startQuiz();
         }
     })
-    function startQuiz();
-
+    startQuiz();
 
 
 
