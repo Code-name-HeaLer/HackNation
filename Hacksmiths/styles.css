@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(48, 122, 250);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.road{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.road img{
+    width: 873px;
+}
+/* CSS for positioning rivers */
+.river-left {
+    position: fixed;
+    top: 0;
+    left: -219px;
+    width: 50%; /* Set width to half of the viewport width */
+    height: 100vh; /* Set height to full viewport height */
+    z-index: 1; /* Ensure it's behind other elements */
+}
+
+.river-right {
+    position: fixed;
+    top: 0;
+    right: -219px;
+    width: 50%; /* Set width to half of the viewport width */
+    height: 100vh; /* Set height to full viewport height */
+    z-index: 1; /* Ensure it's behind other elements */
+}
+
+.character-container {
+    position: absolute;
+    bottom: 0; /* Position characters at the bottom of the road */
+    width: 100%; /* Ensure characters span the full width of the road */
+    display: flex;
+    justify-content: space-around; /* Space characters evenly across the road */
+    align-items: flex-end; /* Align characters to the bottom of the road */
+    margin: 0 0px;
+}
+
+/* Character image styling */
+.character-container img {
+    width: 120px; /* Adjust the width as needed */
+    height: auto;
+}
+
+/* Individual character styling */
+.char1, .char2 {
+    flex-shrink: 0; /* Prevent characters from shrinking */
+}
+
+.char1{
+    margin-left: -326px;
+}
+
+.char2{
+    margin-right: -326px;
+}
+
+.boat img{
+    position: absolute;
+    top: 40px; 
+    width: 80px; 
+    height: auto;
+    z-index: 2;
+} 
+
+.boat {
+    position: absolute;
+    top: -100px; /* Initial position above the viewport */
+    left: 50px; /* Adjust as needed */
+    animation: moveAndRotate 10s linear infinite;
+    z-index: 20;
+}
+
+@keyframes moveAndRotate {
+    0% {
+        top: -100px; /* Initial position above the viewport */
+        transform: rotate(0deg); /* Initial rotation */
+    }
+    25% {
+        top: calc(50% - 50px); /* Move smoothly to the center of the left river */
+        transform: rotate(90deg); /* Rotate smoothly */
+    }
+    50% {
+        top: calc(50% - 50px); /* Maintain position at the center of the left river */
+        transform: rotate(180deg); /* Continue rotation */
+    }
+    75% {
+        top: calc(50% - 50px); /* Maintain position at the center of the left river */
+        transform: rotate(270deg); /* Continue rotation */
+    }
+    100% {
+        top: -100px; /* Return to the initial position above the viewport */
+        transform: rotate(360deg); /* Complete rotation */
+    }
+}
