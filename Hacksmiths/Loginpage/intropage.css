@@ -1,0 +1,202 @@
+
+@font-face {
+    font-family: 'thunderbold_demoregular';
+    src: url('fonts/Thunderboldfont/thunderbolddemo-webfont.woff2') format('woff2'),
+         url('fonts/Thunderboldfont/thunderbolddemo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'our_arcade_gamesregular';
+    src: url('fonts/ourarcadegamesfont/our-arcade-games-webfont.woff2') format('woff2'),
+         url('fonts/ourarcadegamesfont/our-arcade-games-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'retrogamingregular';
+    src: url('fonts/retrogamingfont/retrogaming-webfont.woff2') format('woff2'),
+         url('fonts/retrogamingfont/retrogaming-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'transformersregular';
+    src: url('fonts/transformersfont/transformers_movie-webfont.woff2') format('woff2'),
+         url('fonts/transformersfont/transformers_movie-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'dark_agesregular';
+    src: url('fonts/darkagesfont/cwdrkage-webfont.woff2') format('woff2'),
+         url('fonts/darkagesfont/cwdrkage-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: 'thunderbold_demoregular';
+    color:white;
+    font-size: x-large;
+    background: linear-gradient(to top, rgb(98, 35, 98), transparent),
+    url(images/introbg.jpg);
+        opacity: .8;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%, 100%;
+  }
+
+
+  .navbar{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-left: 75px;
+    padding-right: 15px;
+    background-color: black;
+}
+
+h1{
+        font-family: 'transformersregular';
+        color: #a6384c;
+    margin: 0 40px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 30px 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    padding:5px 0;
+    border: 2px solid transparent;
+}
+
+nav ul li a:hover{
+    border-bottom: 2px solid white;
+    filter: drop-shadow(2px 2px 4px white);
+    transition: 0.5s;
+}
+
+nav ul button a:hover{
+    border-bottom: 2px solid white;
+    filter: drop-shadow(2px 2px 4px rgb(61, 95, 118));
+    transition: 0.5s;
+}
+
+.logo{
+    position: absolute;
+    height:60px;
+    width: 80px;
+    margin-top: 10px;
+    
+        padding-left: 5px;
+        border-radius: 50%;
+}
+.main{
+    margin-top: 2%;
+    margin-right:1%;
+    margin-left:30px;
+    width:100%;
+    height:500px;
+}
+
+h2{
+    font-family:'our_arcade_gamesregular';
+    font-size:25px;
+}
+.text{
+    background: linear-gradient(to bottom, rgba(5, 0, 10, 0.441), transparent);
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+.main img{
+    margin-top: 0px;
+    width:35%;
+    height: 350px;
+    border-radius: 60%;
+    border: 5px solid #fff;
+    box-shadow: rgb(57, 57, 57);
+}
+.content{
+    margin-top: 1%;
+    margin-right: 0%;
+    float:right;
+    margin-left: 1%;
+    width: 60%;
+}
+
+p{
+    font-family: 'dark_agesregular';
+    font-size: 15px;
+    margin-top: 10px;
+}
+.play-btn{
+    background-color: rgb(104, 173, 104);
+    font-family:'retrogamingregular';
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 60px;
+    font-size: 30px;
+    margin: 10px 0;
+    color:black;
+    filter: drop-shadow(2px 2px 4px transparent);
+    height:70px;
+    width: 200px;
+}
+.play-btn:hover{
+    filter: drop-shadow(2px 2px 4px white);
+    background-color: hsl(0, 6%, 72%);
+    transition: 0.5s;
+    color: #fff;
+}
+.dyk{
+    display: flex; 
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-top:10px;
+    margin-top: 20px;
+    margin-left:250px;
+    width: 50%;
+    height:200px;
+    border-radius: 10px;
+    background: linear-gradient(to top, rgba(39, 32, 32, 0.441), transparent), linear-gradient(to bottom, rgba(160, 155, 106, 0.441), transparent);
+}
+.dyk img{
+    height: 60px;
+    border: none;
+}
+
+.dyk .icon p{
+    padding:10px;
+    font-size: 12px;
+    background-color: rgb(151, 146, 147);
+    border-radius: 10px;
+}
+.dyk .icon .h3{
+    font-family: 'our_arcade_gamesregular';
+    font-size: 15px;
+    color: #dae480;
+}
+.game{
+    margin-right:20px;
+}

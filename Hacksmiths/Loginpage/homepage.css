@@ -1,0 +1,270 @@
+@font-face {
+  font-family: 'our_arcade_gamesregular';
+  src: url('our-arcade-games-webfont.woff2') format('woff2'),
+       url('our-arcade-games-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'thunderbold_demoregular';
+  src: url('thunderbolddemo-webfont.woff2') format('woff2'),
+       url('thunderbolddemo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'our_arcade_gamesregular';
+    background-image:
+        linear-gradient(to top, rgb(98, 35, 98), transparent),
+        url('images/Retrogaming2.jpg');
+        opacity: .9;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%, 100%;
+  }
+
+  nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-left: 75px;
+    justify-content: left;
+    padding-right: 15px;
+  }
+  .logo{
+        position: absolute;
+        height:70px;
+        left: auto;
+        width: 80px;
+        border:1px solid #333;
+        
+            padding-left: 5px;
+            padding-top: 1px;
+            border-radius: 8px;
+  }
+  
+  header {
+    font-size: smaller;
+    background-image:
+        url('images\header.png');
+        opacity: .9;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%, 100%;
+    color: #fff;
+    padding: 5px;
+    text-align: left;
+    height: 90px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    width: 100%;
+    background-color: rgb(1, 115, 36);
+    margin: 0px;
+    border-radius: 8px;
+  }
+  
+#button{
+  font-family:'thunderbold_demoregular' ;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 8px;
+    padding-left: 30px;
+  }
+
+  button{
+    font-family: 'our_arcade_gamesregular';
+    background-color: rgb(31, 67, 38) ;
+    border-radius: 6px;
+    border: #fff;
+    box-shadow: rgb(31, 67, 38);
+    padding: 3px;
+    width: 100px;
+    margin-top:15px;
+    margin-bottom:15px;
+  }
+
+  .button1{
+    margin-left: 350px;
+  }
+  .button2{
+    margin-left: 5px;
+  }
+
+  #searchBox{
+    height: 36px;
+    width: 250px;
+  }
+
+  .searchBar{
+    width: 260px;
+  }
+
+  nav a {
+    font-size: large;
+    text-decoration: none;
+    color: #bbf5c6;
+    font-weight: bold;
+    font-style:italic;
+    padding: 8px;
+    display: block;
+    text-align:center;
+    border-radius: 8px;
+    box-shadow: #333;
+    
+  }
+  nav a:hover{
+    background-color: hsl(0, 0%, 10%);
+  }
+  
+  @media screen and (max-width: 958) {
+    header {
+      height: 150px;
+    }
+    nav{
+    display:flex;
+    justify-content:left;
+    padding-top: 0px;
+    padding-left: 75px;
+    padding-right: 10px;
+    } 
+    .button1{
+      margin-left: 70px;
+    }
+    .button2{
+      margin-left: 5px;
+    }
+  
+}
+
+.section{
+  background-color: rgb(31, 67, 38) ;
+  display: flex;
+justify-content: space-between;
+padding: 15px;
+width: 100%;
+height: 30%;
+margin-left: 5px;
+margin-top: 5px;
+margin-right: 5px;
+border-radius: 10px;
+margin-bottom: 0px;
+}
+.section img{
+height: 100px;
+border-radius: 10px;
+}
+.section h1{
+  margin: 0px;
+  color: beige;
+
+}
+.section p{
+  color:rgb(232, 203, 139);
+  padding-right: 40px;
+  padding-top: 5px;
+  font-size: medium;
+}
+
+.topics{
+  display: flex;
+  background-color: #61875f;
+  margin-top: 5px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 5px;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.topics h2{
+  text-align: center;
+  vertical-align: middle;
+  font-family: Garamond;
+  font-style: italic;
+  font-weight: bold;
+  font-size:xx-large;
+  color:rgb(232, 203, 139) ;
+}
+
+.container1{
+  position: relative;
+  width: 1140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:nowrap;
+  padding: 5px;
+  margin-top: 0px;
+  width: 100%;
+  height: 100%;;
+}
+.container1 .card{
+  border-radius: 10px;
+  width:186.5px;
+  position: relative;
+  height:400px;
+  background:rgb(31, 67, 38);
+  opacity: 0.9;
+  margin: 5px;
+  padding: 10px ;
+  display: flex;
+  flex-direction:column;
+  box-shadow: 0.5px 10px #3a3232;
+  transition: 0.3s ease-in-out;
+  margin-top: 5px;
+}
+
+.container1 .card .imgBx img{
+  height: 100px;
+  border-radius: 10px;
+}
+
+.container1 .card .imgBx h4{
+  font-family: 'our_arcade_gamesregular';
+  font-size: 18px;
+  color: rgb(232, 203, 139);
+  
+}
+
+  .hero {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }

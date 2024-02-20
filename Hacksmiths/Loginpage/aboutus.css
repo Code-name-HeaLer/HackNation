@@ -1,0 +1,257 @@
+
+body {
+    font-family: Garamond;
+    font-style: italic;
+    font-size: large;
+    margin: 0;
+    padding: 0px;
+}
+
+.logo{
+    position: absolute;
+        height: 250px;
+        top:0;
+    right:0;
+        border-top: 10px;
+        margin-right: 15px;
+            padding-right: 15px;
+            padding-top: 30px;
+}
+
+.column {
+    display: flex;
+    float: left;
+    width: 20%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    align-items: center;
+    height:270px;
+}
+
+.header{
+    font-size: x-large;
+    font-weight: bold;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    height: 98%;
+}
+.about-section {
+    padding: 10px;
+    padding-top: 2px;
+    padding-left: 50px;
+    text-align: left;
+    background-color: #293755;
+    color: white;
+    justify-content: space-between;
+}
+.container {
+    padding: 0 16px;
+}
+.h1 {
+    color: grey;
+}
+@media screen and (max-width: 962px) {
+    .logo{
+        height:182px;
+        width: 192px;
+    }
+}
+@media screen and (max-width: 954px) {
+    .logo{
+        height:168px;
+        width: 178px;
+    }
+}
+@media screen and (max-width: 948px) {
+    .logo{
+        height:164px;
+        width: 174px;
+    }
+}
+@media screen and (max-width: 944px) {
+    .logo{
+        height:157px;
+        width: 177px;
+    }
+}
+@media screen and (max-width: 878px) {
+    .logo{
+        height:150px;
+        width: 170px;
+    }
+}
+@media screen and (max-width: 864px) {
+    .logo{
+        height:145px;
+        width: 165px;
+    }
+}
+@media screen and (max-width: 851px) {
+    .logo{
+        height:120px;
+        width: 140px;
+    }
+}
+@media screen and (max-width: 835px) {
+    .logo{
+        height:105px;
+        width: 125px;
+    }
+}
+@media screen and (max-width: 821px) {
+    .logo{
+        height:90px;
+        width: 100px;
+    }
+}
+@media screen and (max-width: 805px) {
+    .logo{
+        height:80px;
+        width: 90px;
+    }
+}
+@media screen and (max-width: 722px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .logo{
+        height:70px;
+        width: 80px;
+    }
+}
+@media screen and (max-width: 558px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .logo{
+        height:40px;
+        width: 50px;
+    }
+}
+@media screen and (max-width: 464px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .about-section{
+        padding-left: 40px;
+    }
+}
+@media screen and (max-width: 454px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .about-section{
+        padding-left: 30px;
+    }
+}
+@media screen and (max-width: 446px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .about-section{
+        padding-left: 30px;
+    }
+}
+@media screen and (max-width: 436px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .about-section{
+        padding-left: 25px;
+    }
+}
+@media screen and (max-width: 432px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .about-section{
+        padding-left: 15px;
+    }
+}
+@media screen and (max-width: 422px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .about-section{
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width: 416px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .about-section{
+        padding-left: 5px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .logo{
+        padding-right: 13px;
+    }
+}
+@media screen and (max-width: 414px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .logo{
+        padding-right: 10px;
+    }
+}
+@media screen and (max-width: 406px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .logo{
+        padding-right: 5px;
+    }
+}
+@media screen and (max-width: 402px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .logo{
+        padding-right: 2px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .logo{
+        height:35px;
+        width: 45px;
+        padding-right: 2px;
+    }
+}
+@media screen and (max-width: 385px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    .logo{
+        height:30px;
+        width: 40px;
+        padding-right: 0px;
+    }
+}
+
+
