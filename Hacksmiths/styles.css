@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: rgb(48, 122, 250);
@@ -6,68 +6,66 @@ body{
     font-family: Arial, sans-serif;
 }
 
-.road{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+
+
+.road {
+    display: block;
+    width: 100%; /* Adjusted width for centering */
+    height: auto; /* Ensures aspect ratio is maintained */
+    z-index: 1;
+    margin: auto;
+    max-width: 870px;
 }
 
 .road img{
-    width: 873px;
+    width: 550px;
 }
-/* CSS for positioning rivers */
-.river-left {
-    position: fixed;
+
+.river-left,
+.river-right {
+    position: absolute;
     top: 0;
-    left: -219px;
-    width: 50%; /* Set width to half of the viewport width */
-    height: 100vh; /* Set height to full viewport height */
-    z-index: 1; /* Ensure it's behind other elements */
+    height: 100%;
+    width: auto;
+}
+
+.river-left {
+    left: 1px;
+    padding-left: 0;
+    margin-left: 0px;
 }
 
 .river-right {
-    position: fixed;
-    top: 0;
-    right: -219px;
-    width: 50%; /* Set width to half of the viewport width */
-    height: 100vh; /* Set height to full viewport height */
-    z-index: 1; /* Ensure it's behind other elements */
+    right: 1px;
+    padding-right: 0;
+    margin-right: 0px;
 }
 
-.character-container {
+.character {
     position: absolute;
-    bottom: 0; /* Position characters at the bottom of the road */
-    width: 100%; /* Ensure characters span the full width of the road */
-    display: flex;
-    justify-content: space-around; /* Space characters evenly across the road */
-    align-items: flex-end; /* Align characters to the bottom of the road */
-    margin: 0 0px;
-}
-
-/* Character image styling */
-.character-container img {
-    width: 120px; /* Adjust the width as needed */
+    top: 60px; /* Adjust as needed */
+    width: 120px; /* Adjust width of character image */
     height: auto;
+    z-index: 2; /* Ensure characters are above road */
+    filter: drop-shadow(5px 5px 5px #9c91a0);
 }
 
-/* Individual character styling */
-.char1, .char2 {
-    flex-shrink: 0; /* Prevent characters from shrinking */
+.character1 {
+    top:630px;
+    left: 510px; /* Adjust as needed */
+    position: absolute;
 }
 
-.char1{
-    margin-left: -326px;
-}
-
-.char2{
-    margin-right: -326px;
+.character2 {
+    top:630px;
+    right: 510px; /* Adjust as needed */
+    position: absolute;
 }
 
 .boat img{
     position: absolute;
     top: 40px; 
-    width: 80px; 
+    width: 100px; 
     height: auto;
     z-index: 2;
 } 
@@ -76,8 +74,10 @@ body{
     position: absolute;
     top: -100px; /* Initial position above the viewport */
     left: 50px; /* Adjust as needed */
+}
+
+.boat-circle-animation {
     animation: moveAndRotate 10s linear infinite;
-    z-index: 20;
 }
 
 @keyframes moveAndRotate {
@@ -102,3 +102,110 @@ body{
         transform: rotate(360deg); /* Complete rotation */
     }
 }
+
+/* blurry start screen */
+.start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(10px); /* Apply blurry effect */
+}
+
+.blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+}
+
+.content {
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.game-container {
+    display: none; /* Initially hide the game container */
+}
+
+/* Speech bubble style */
+.speech-bubble {
+    position: absolute;
+    background-color: #ffffff; /* Bubble background color */
+    padding: 10px; /* Padding around text */
+    border-radius: 10px; /* Border radius to create rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth effect */
+    z-index: 999;
+    display: none; /* Initially hide speech bubbles */
+}
+
+/* Position speech bubbles above characters */
+.speech-bubble1 {
+    top: 560px; /* Adjust vertical position */
+    left: 530px; /* Position on the left */
+}
+
+.speech-bubble2 {
+    top: 560px; /* Adjust vertical position */
+    right: 530px; /* Position on the right */
+}
+
+/* Text inside speech bubble */
+.speech-bubble .char-speech {
+    display: inline; /* Ensure text stays on the same line */
+}
+
+/* Add pointer/triangle to speech bubbles */
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; /* Adjust vertical position of pointer */
+    border-width: 10px; /* Size of pointer */
+    border-style: solid;
+}
+
+/* Pointer for speech bubble 1 */
+.speech-bubble1::after {
+    left: 43px; /* Position on the left */
+    border-color: #ffffff transparent transparent; /* Color of pointer */
+}
+
+/* Pointer for speech bubble 2 */
+.speech-bubble2::after {
+    right: 43px; /* Position on the right */
+    border-color: #ffffff transparent transparent; /* Color of pointer */
+}
+
+
+
+
+
+
+

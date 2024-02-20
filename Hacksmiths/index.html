@@ -7,28 +7,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="road">
-        <img src="images/road new.jpeg" alt="">
+    <div class="container">
+        <!-- game elements here -->
+        <img src="images/road new.jpeg" alt="main road" class="road">
+        <video class="river-left" autoplay muted loop>
+            <source src="videos/video-left.mp4" type="video/mp4">
+        </video>
+        <video class="river-right" autoplay muted loop>
+            <source src="videos/video-right.mp4" type="video/mp4">
+        </video>
+        <div class="character-container">
+            <img src="images/character1.png" alt="Character 1" class="character character1" id="character1">
+            <div class="speech-bubble1 speech-bubble">
+                <div class="char-1-speech char-speech"></div>
+            </div>
+        </div>
+        <div class="character-container">
+            <img src="images/character2.png" alt="Character 2" class="character character2" id="character2">
+            <div class="speech-bubble2 speech-bubble">
+                <div class="char-2-speech char-speech"></div>
+            </div>
+        </div>
+        <div class="boat" id="boat">
+            <img src="images/boat.png" alt="boat">
+        </div>
     </div>
+    
 
-    <video class="river-left" id="rightVideo" autoplay muted loop>
-        <source src="videos/video-left.mp4" type="video/mp4">
-    </video>
-
-    <video class="river-right" id="leftVideo" autoplay muted loop>
-        <source src="videos/video-right.mp4" type="video/mp4">
-    </video>
-
-    <div class="character-container">
-        <img src="images/character1.png" alt="char1" class="char1">
-    </div>
-
-    <div class="character-container">
-        <img src="images/character2.png" alt="cahr2" class="char2">
-    </div>
-
-    <div class="boat" id="boat">
-        <img src="images/boat.png" alt="boat">
+<!--start page and lets go button-->
+    <div class="start-screen">
+        <div class="blurry-background"></div>
+        <div class="content">
+            <h1>Ready for the adventure?</h1>
+            <h2>Level 1</h2>
+            <button id="startButton">Let's Go</button>
+        </div>
     </div>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script defer src="script.js"></script>
